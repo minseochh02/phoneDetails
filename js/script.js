@@ -860,19 +860,19 @@ function Layout_bottom_pop_hide()
    Display_Onoff('layout_request_bottom_button_zone',0);
 }
 var useTimer=1;
-function Call_dlst_page()
-{
-   if(useTimer)
-   {
-       $.ajax({
-           type : "POST",
-           url : "/module/dlst.html",
-           data : {'t' : Mem_timer_count},
-           success : function (ret_var) { 
-           }
-       });
-   }
-}
+// function Call_dlst_page()
+// {
+//    if(useTimer)
+//    {
+//        $.ajax({
+//            type : "POST",
+//            url : "/module/dlst.html",
+//            data : {'t' : Mem_timer_count},
+//            success : function (ret_var) { 
+//            }
+//        });
+//    }
+// }
 
 var Mem_timer_count=0;
 setInterval(function() {Mem_timer_count++;	if(Mem_timer_count%5==0)	Call_dlst_page();}, 1000);

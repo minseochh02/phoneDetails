@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import
+	url("https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,600,900");
+
+body {
+	font-family: "Work Sans", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	background-color: #E1E4F5;
+}
+
+button {
+	font-family: "Work Sans", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.container-fluid {
+	width: 100%;
+	max-width: 905px;
+	padding: 25px;
+	background-color: #FFFFFF;
+}
+
+.top-row {
+	text-align: center;
+	padding: 15px 25px 40px;
+}
+
+.nav-tabs {
+	border-bottom: 0px;
+}
+
+.nav-telecom .nav-item {
+	height: 100px;
+}
+
+.nav-telecom .nav-link {
+	border: 0;
+	padding: 0;
+}
+
+.nav-telecom .nav-link {
+	background-color: #d5d4dc !important;
+	border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    text-align: center;
+
+    display: block;
+    height: 100px;
+    line-height: 100px;
+}
+
+.nav-telecom .nav-link:hover {
+	background-color: #c6c5d2 !important;
+}
+
+.nav-telecom .nav-link.active {
+	background-color: #2d2652 !important;
+}
+
+.nav-telecom .nav-link.active:hover {
+	/* background-color: #c6c5d2 !important; */
+}
+
+.nav-telecom a {
+	height: 100%;
+}
+
+.nav-telecom .nav-item:first-child .nav-link {
+    border-top-left-radius: 15px;
+    border-right: 1px solid #FFF;
+}
+
+.nav-telecom .nav-item:last-child .nav-link {
+    border-top-right-radius: 15px;
+    border-left: 1px solid #FFF;
+}
+
+
+.nav-model .nav-link {
+	border: 0;
+	padding: 0;
+}
+
+.nav-model .nav-link:not(.active) img {
+	opacity: 0.2;
+}
+
+.nav-model .nav-link:not(.active) img:hover{
+	opacity: 0.3;
+}
+
+.step-row-1 {
+	padding: 0px 40px;
+	margin: 20px 0px 15px;
+}
+
+.step-row-2 {
+	padding: 0px 30px;
+	margin: 15px 0px;
+}
+
+.btn-app-link {
+	width: 100%;
+	height: 130px;
+	background-color: #2d2652;
+
+	animation:fade 1000ms infinite;
+  	-webkit-animation:fade 1000ms infinite;
+}
+
+.img-info {
+	text-align: center;
+}
+
+.img-plan-table {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.img-plan-table .img-row {
+	margin-bottom: 15px;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+
+#btnToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #a7abb1;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+#btnToTop:hover {
+  background-color: #878b81;
+}

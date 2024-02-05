@@ -420,7 +420,9 @@ function Request_input_check(fm)
            if(!Request_input_check_submit_check)
            {
                Request_input_check_submit_check=1;
-               fm.submit();
+               alert("신청이 완료되었습니다.");
+               location.reload();
+            //    fm.submit();
            }
        }
    }
@@ -771,10 +773,7 @@ function Request_input_focus(fm)
        }
        else
        {
-        alert ('신청이 완료되었습니다.');
-        location.reload();
-        //refresh page
-        //    fm.submit();
+           fm.submit();
        }
    }
 }

@@ -771,7 +771,10 @@ function Request_input_focus(fm)
        }
        else
        {
-           fm.submit();
+        alert ('신청이 완료되었습니다.');
+        location.reload();
+        //refresh page
+        //    fm.submit();
        }
    }
 }

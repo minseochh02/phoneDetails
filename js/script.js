@@ -417,7 +417,7 @@ function Request_input_check(fm)
        }
        else
        {
-        const formData = new FormData(form); // Assuming 'form' is your form element
+        const formData = new FormData(fm); // Assuming 'form' is your form element
             
         // Optional: Convert formData to a plain object if your endpoint expects JSON
         const formObject = {};

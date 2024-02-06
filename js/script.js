@@ -417,34 +417,35 @@ function Request_input_check(fm)
        }
        else
        {
-        const formData = new FormData(fm); // Assuming 'form' is your form element
+        fm.submit();
+        // const formData = new FormData(fm); // Assuming 'form' is your form element
             
-        // Optional: Convert formData to a plain object if your endpoint expects JSON
-        const formObject = {};
-        formData.forEach(function(value, key) {
-            formObject[key] = value;
-        });
+        // // Optional: Convert formData to a plain object if your endpoint expects JSON
+        // const formObject = {};
+        // formData.forEach(function(value, key) {
+        //     formObject[key] = value;
+        // });
         
-        fetch('https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec', {
-            redirect: "follow",
-            method: 'POST',
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8",
-            },
-            body: JSON.stringify(formObject), // Send the form data as JSON
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text; // or .text() or .blob() etc., depending on the server response
-        })
-        .then(data => {
-            alert(response.text);
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
+        // fetch('https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec', {
+        //     redirect: "follow",
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-Type": "text/plain;charset=utf-8",
+        //     },
+        //     body: JSON.stringify(formObject), // Send the form data as JSON
+        // })
+        // .then(response => {
+        //     if (!response.ok) {
+        //         throw new Error('Network response was not ok');
+        //     }
+        //     return response.text; // or .text() or .blob() etc., depending on the server response
+        // })
+        // .then(data => {
+        //     alert(response.text);
+        // })
+        // .catch(error => {
+        //     console.error('There has been a problem with your fetch operation:', error);
+        // });
        }
    }
 }

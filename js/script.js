@@ -417,6 +417,7 @@ function Request_input_check(fm)
        }
        else
        {
+        fm.submit();
         // const formData = new FormData(fm); // Assuming 'form' is your form element
             
         // // Optional: Convert formData to a plain object if your endpoint expects JSON
@@ -445,11 +446,11 @@ function Request_input_check(fm)
         // .catch(error => {
         //     console.error('There has been a problem with your fetch operation:', error);
         // });
-        var xmlhttp = new XMLHttpRequest();
-var theUrl = "https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec";
-xmlhttp.open("GET", theUrl);
-xmlhttp.setRequestHeader("Content-Type", 'text/plain;charset=utf-8');
-xmlhttp.send();
+//         var xmlhttp = new XMLHttpRequest();
+// var theUrl = "https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec";
+// xmlhttp.open("GET", theUrl);
+// xmlhttp.setRequestHeader("Content-Type", 'text/plain;charset=utf-8');
+// xmlhttp.send();
        }
    }
 }

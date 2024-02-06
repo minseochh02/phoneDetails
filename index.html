@@ -69,7 +69,7 @@
 				<!--ADDED-->
 				<div class="Input_width_Size_Box_In From_Background_Color1 From_Round_Color8">
 
-					<form name="request_1_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
+					<form class="send" name="request_1_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
 					<input name="Mode_value" type="hidden" value="Write_now">
 					<input name="g" type="hidden" value="">
 							<input name="tk" type="hidden" value="170710137188121">
@@ -314,7 +314,7 @@
 				<!--ADDED-->
 				<div class="Input_width_Size_Box_In From_Background_Color1 From_Round_Color8">
 
-					<form name="request_2_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
+					<form class="send" name="request_2_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
 					<input name="Mode_value" type="hidden" value="Write_now">
 					<input name="g" type="hidden" value="">
 							<input name="tk" type="hidden" value="170710137188121">
@@ -559,7 +559,7 @@
 				<!--ADDED-->
 				<div class="Input_width_Size_Box_In From_Background_Color1 From_Round_Color8">
 
-					<form name="request_3_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
+					<form class="send" name="request_3_form" method="post" action="https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec">
 					<input name="Mode_value" type="hidden" value="Write_now">
 					<input name="g" type="hidden" value="">
 							<input name="tk" type="hidden" value="170710137188121">
@@ -786,6 +786,15 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+			var form = document.querySelector(".send"); // Select the form by its class
+  if(form) {
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // This prevents the default form submission action
+
+    });
+  }
+});
 		var topOffset;
 
 		var getParam = function(key){

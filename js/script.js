@@ -448,7 +448,7 @@ function Request_input_check(fm)
         var xmlhttp = new XMLHttpRequest();
 var theUrl = "https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec";
 xmlhttp.open("GET", theUrl);
-xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xmlhttp.setRequestHeader("Content-Type", 'text/plain;charset=utf-8');
 xmlhttp.send();
        }
    }

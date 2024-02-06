@@ -426,9 +426,10 @@ function Request_input_check(fm)
         });
         
         fetch('https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec', {
+            redirect: "follow",
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // Assuming your server expects JSON. Change as needed.
+                "Content-Type": "text/plain;charset=utf-8",
             },
             body: JSON.stringify(formObject), // Send the form data as JSON
         })

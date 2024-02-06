@@ -417,13 +417,33 @@ function Request_input_check(fm)
        }
        else
        {
-           if(!Request_input_check_submit_check)
-           {
-               Request_input_check_submit_check=1;
-            //    alert("신청이 완료되었습니다.");
-            //    location.reload();
-               fm.submit();
-           }
+        const formData = new FormData(form); // Assuming 'form' is your form element
+            
+        // Optional: Convert formData to a plain object if your endpoint expects JSON
+        const formObject = {};
+        formData.forEach(function(value, key) {
+            formObject[key] = value;
+        });
+        
+        fetch('YOUR_ENDPOINT_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', // Assuming your server expects JSON. Change as needed.
+            },
+            body: JSON.stringify(formObject), // Send the form data as JSON
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text; // or .text() or .blob() etc., depending on the server response
+        })
+        .then(data => {
+            alert(response.text);
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
        }
    }
 }

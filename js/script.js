@@ -1,8 +1,10 @@
 
-function On_off_layer(num){
+function On_off_layer(num) {
     var objDiv = document.getElementById(num);
-    if(objDiv.style.display=="block"){ objDiv.style.display = "none"; }
-     else{ objDiv.style.display = "block"; }
+    if(objDiv.style.display=="block") {
+        objDiv.style.display = "none"; 
+    } else { 
+        objDiv.style.display = "block"; }
 }
 
 function zip_code_find(add_form)

@@ -425,7 +425,7 @@ function Request_input_check(fm)
             formObject[key] = value;
         });
         
-        fetch('YOUR_ENDPOINT_URL', {
+        fetch('https://script.google.com/macros/s/AKfycbzLroC_itazSTEa9W3mshUk2MtHkgnTCIbG_6DYnfJid_U54qZzaI53IBmGlVTwXbxe/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Assuming your server expects JSON. Change as needed.
